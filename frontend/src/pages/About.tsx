@@ -100,7 +100,7 @@ export default function About() {
           <SectionHeading subtitle="HOTEL CROWN" title="Amenities & Facilities" />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {facilities.map((item, i) => (
-              <div key={i} className="text-center p-6 bg-white hover:shadow-lg transition-shadow">
+              <div key={i} className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="text-[var(--color-primary)] mb-3 inline-block">{item.icon}</div>
                 <h4 className="font-[var(--font-heading)] text-sm text-[var(--color-dark)]">
                   {item.title}

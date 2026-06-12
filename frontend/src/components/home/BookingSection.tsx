@@ -71,8 +71,8 @@ export default function BookingSection() {
               </select>
             </div>
           </div>
-          <button className="w-full bg-[var(--color-primary)] text-white py-4 font-[var(--font-condensed)] text-sm uppercase tracking-[3px] hover:bg-[var(--color-primary-dark)] transition-colors">
-            CHECK AVAILABILITY
+          <button className="btn-primary w-full !py-4 font-bold text-sm uppercase tracking-widest mt-4">
+            Check Availability
           </button>
         </div>
 

@@ -80,7 +80,7 @@ export default function FacilitiesSection() {
       <div className="max-w-7xl mx-auto px-4">
         <SectionHeading subtitle="HOTEL CROWN" title="Amenities & Facilities" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-white p-8">
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <h4 className="font-[var(--font-heading)] text-xl text-[var(--color-dark)] mb-6">
               Complimentary Services
             </h4>
@@ -93,7 +93,7 @@ export default function FacilitiesSection() {
               ))}
             </ul>
           </div>
-          <div className="bg-white p-8">
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <h4 className="font-[var(--font-heading)] text-xl text-[var(--color-dark)] mb-6">
               General Facilities
             </h4>

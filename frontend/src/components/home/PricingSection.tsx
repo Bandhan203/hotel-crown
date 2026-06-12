@@ -41,7 +41,7 @@ const FALLBACK_SERVICES: HotelService[] = [
     id: 5,
     name: 'Spa Treatment',
     description:
-      'Indulge in a world of relaxation with our premium spa treatments designed to restore balance and rejuvenate both body and mind.',
+      'Indulge in a world of relaxation with our premium spa treatments. Designed to restore balance and rejuvenate both body and mind, each therapy offers a peaceful escape and a refreshing wellness experience.',
     icon: 'MdSpa',
   },
 ];

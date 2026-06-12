@@ -79,7 +79,7 @@ export default function Facilities() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {moreFeatures.map((item, i) => (
-              <div key={i} className="text-center p-8 bg-white hover:shadow-lg transition-shadow">
+              <div key={i} className="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="text-[var(--color-primary)] mb-3 inline-block">{item.icon}</div>
                 <h4 className="font-[var(--font-heading)] text-sm text-[var(--color-dark)]">{item.title}</h4>
               </div>

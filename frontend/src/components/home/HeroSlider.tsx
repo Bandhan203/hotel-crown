@@ -161,8 +161,8 @@ export default function HeroSlider() {
               <option className="text-black">3</option>
             </select>
           </div>
-          <button className="bg-[var(--color-primary)] text-white text-xs font-[var(--font-condensed)] uppercase tracking-[3px] px-8 py-3 hover:bg-[var(--color-primary-dark)] transition-colors">
-            CHECK NOW
+          <button className="btn-primary !px-8 !py-3">
+            Check Now
           </button>
         </div>
       </div>

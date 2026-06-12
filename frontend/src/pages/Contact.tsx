@@ -33,7 +33,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl shadow-sm flex items-center justify-center shrink-0">
                     <FiMapPin className="text-white" size={20} />
                   </div>
                   <div>
@@ -45,7 +45,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl shadow-sm flex items-center justify-center shrink-0">
                     <FiPhone className="text-white" size={20} />
                   </div>
                   <div>
@@ -59,7 +59,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl shadow-sm flex items-center justify-center shrink-0">
                     <FiMail className="text-white" size={20} />
                   </div>
                   <div>
@@ -112,7 +112,7 @@ export default function Contact() {
                 />
                 <button
                   type="submit"
-                  className="bg-primary text-white py-3 px-8 font-(--font-condensed) text-sm uppercase tracking-[3px] hover:bg-primary-dark transition-colors"
+                  className="btn-primary !px-8 !py-3 w-auto"
                 >
                   SEND MESSAGE
                 </button>

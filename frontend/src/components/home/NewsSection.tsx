@@ -81,28 +81,30 @@ export default function NewsSection() {
         >
           {posts.map((post) => (
             <SwiperSlide key={post.id}>
-              <div className="group cursor-pointer">
+              <div className="group cursor-pointer bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all pb-5 overflow-hidden h-full">
                 <div className="relative overflow-hidden mb-4">
                   <img
                     src={toAbsoluteMediaUrl(post.image)}
                     alt={post.title}
-                    className="w-full h-62.5 object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-[250px] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute bottom-4 left-4 flex gap-2">
-                    <span className="bg-primary text-white text-xs px-3 py-1 font-(--font-condensed)">
+                    <span className="bg-gradient-primary text-white text-xs px-3 py-1 font-bold rounded shadow-sm">
                       {formatDateShort(post.published_at)}
                     </span>
-                    <span className="bg-white text-dark text-xs px-3 py-1 font-(--font-condensed)">
+                    <span className="bg-white/90 backdrop-blur-sm text-dark text-xs px-3 py-1 font-bold rounded">
                       {post.category || 'NEWS'}
                     </span>
                   </div>
                 </div>
-                <Link
-                  to={`/news/${post.slug}`}
-                  className="font-(--font-heading) text-lg text-dark hover:text-primary transition-colors"
-                >
-                  {post.title}
-                </Link>
+                <div className="px-5">
+                  <Link
+                    to={`/news/${post.slug}`}
+                    className="font-heading text-lg text-dark hover:text-primary transition-colors font-semibold"
+                  >
+                    {post.title}
+                  </Link>
+                </div>
               </div>
             </SwiperSlide>
           ))}

@@ -94,8 +94,8 @@ export default function Gallery() {
                 onClick={() => setActive(cat.key)}
                 className={`px-5 py-2 text-xs font-(--font-condensed) uppercase tracking-[2px] border transition-all ${
                   active === cat.key
-                    ? 'bg-primary text-white border-primary'
-                    : 'border-gray-200 text-body hover:border-primary hover:text-primary'
+                    ? 'bg-gradient-primary text-white border-transparent shadow-sm'
+                    : 'bg-white text-dark border-gray-200 hover:border-primary hover:text-primary'
                 }`}
               >
                 {cat.label}

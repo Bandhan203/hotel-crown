@@ -336,3 +336,5 @@ Please keep backend and frontend changes scoped and follow existing code convent
 
 Built as a complete hotel property management solution — from guest-facing website to staff operations.
 "# hotel-crown" 
+#   h o t e l - c r o w n  
+ 

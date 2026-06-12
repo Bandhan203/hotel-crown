@@ -102,7 +102,9 @@ export default function NewsDetail() {
               />
 
               <div className="flex flex-wrap gap-3 mb-4 text-xs uppercase tracking-wide">
-                <span className="bg-primary text-white px-3 py-1">{formatPublishedDate(post.published_at)}</span>
+                <span className="bg-gradient-primary text-white px-3 py-1 rounded shadow-sm">
+                  {formatPublishedDate(post.published_at)}
+                </span>
                 {post.category && <span className="bg-stone-100 text-stone-800 px-3 py-1">{post.category}</span>}
                 {post.author_name && <span className="bg-stone-100 text-stone-800 px-3 py-1">By {post.author_name}</span>}
               </div>

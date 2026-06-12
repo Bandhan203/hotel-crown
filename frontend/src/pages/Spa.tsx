@@ -73,7 +73,7 @@ export default function Spa() {
           <SectionHeading subtitle="OUR SERVICES" title="Spa Services" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {spaServices.map((service, i) => (
-              <div key={i} className="bg-white group">
+              <div key={i} className="bg-white rounded-xl shadow-sm border border-gray-100 group overflow-hidden transition-all hover:shadow-md">
                 <div className="overflow-hidden">
                   <img
                     src={service.image}

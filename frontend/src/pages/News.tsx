@@ -106,8 +106,8 @@ export default function News() {
                 type="button"
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 text-xs tracking-wide border transition-colors ${selectedCategory === category
-                  ? 'bg-primary text-white border-primary'
-                  : 'bg-white text-dark border-stone-300 hover:border-primary'
+                  ? 'bg-gradient-primary text-white border-transparent shadow-sm'
+                  : 'bg-white text-dark border-gray-200 hover:border-primary'
                 }`}
               >
                 {category}
@@ -130,34 +130,36 @@ export default function News() {
           {!loading && !error && visiblePosts.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {visiblePosts.map((post) => (
-              <article key={post.id} className="group">
+              <article key={post.id} className="group bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all overflow-hidden h-full flex flex-col pb-5">
                 <div className="relative overflow-hidden mb-4">
                   <img
                     src={toAbsoluteMediaUrl(post.image)}
                     alt={post.title}
-                    className="w-full h-70 object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-[250px] object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute bottom-4 left-4 flex gap-2">
-                    <span className="bg-primary text-white text-xs px-3 py-1 font-(--font-condensed)">
+                    <span className="bg-gradient-primary text-white text-xs px-3 py-1 font-bold rounded shadow-sm">
                       {formatPublishedDate(post.published_at)}
                     </span>
                     {post.category && (
-                      <span className="bg-white text-dark text-xs px-3 py-1 font-(--font-condensed)">
+                      <span className="bg-white/90 backdrop-blur-sm text-dark text-xs px-3 py-1 font-bold rounded">
                         {post.category}
                       </span>
                     )}
                   </div>
                 </div>
-                <Link
-                  to={`/news/${post.slug}`}
-                  className="font-(--font-heading) text-xl text-dark hover:text-primary transition-colors block mb-2"
-                >
-                  {post.title}
-                </Link>
-                <p className="text-sm text-body leading-relaxed">{post.excerpt || 'No summary available.'}</p>
-                {post.author_name && (
-                  <p className="text-xs text-body mt-3 uppercase tracking-wide">By {post.author_name}</p>
-                )}
+                <div className="px-5 flex-1 flex flex-col">
+                  <Link
+                    to={`/news/${post.slug}`}
+                    className="font-heading text-xl text-dark hover:text-primary transition-colors block mb-2 font-semibold"
+                  >
+                    {post.title}
+                  </Link>
+                  <p className="text-sm text-body leading-relaxed flex-1">{post.excerpt || 'No summary available.'}</p>
+                  {post.author_name && (
+                    <p className="text-xs text-body mt-3 uppercase tracking-wide">By {post.author_name}</p>
+                  )}
+                </div>
               </article>
             ))}
             </div>

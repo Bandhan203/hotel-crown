@@ -75,7 +75,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <span
-            className={`font-(--font-heading) text-2xl tracking-[4px] uppercase transition-colors ${
+            className={`font-(--font-heading) text-[26px] font-bold tracking-[3px] capitalize transition-colors ${
               isScrolled ? 'text-dark' : 'text-white'
             }`}
           >
@@ -94,7 +94,7 @@ export default function Navbar() {
             >
               <Link
                 to={link.path}
-                className={`px-4 py-2 text-[13px] tracking-[2px] uppercase font-condensed font-medium transition-colors ${
+                className={`px-4 py-2 text-[14px] tracking-wide capitalize font-body font-semibold transition-colors ${
                   isScrolled
                     ? location.pathname === link.path
                       ? 'text-primary'
@@ -138,13 +138,13 @@ export default function Navbar() {
           {user ? (
             <>
               <Link to="/my-bookings"
-                className={`text-[13px] tracking-[2px] uppercase font-condensed font-medium transition-colors ${
+                className={`text-[14px] tracking-wide capitalize font-body font-semibold transition-colors ${
                   isScrolled ? 'text-dark hover:text-primary' : 'text-white hover:text-primary'
                 }`}>
                 My Bookings
               </Link>
               <button onClick={logout}
-                className={`text-[13px] tracking-[1px] uppercase font-condensed transition-colors ${
+                className={`text-[14px] tracking-wide capitalize font-body font-semibold transition-colors ${
                   isScrolled ? 'text-dark hover:text-primary' : 'text-white/70 hover:text-white'
                 }`}>
                 Logout
@@ -182,7 +182,7 @@ export default function Navbar() {
               <div key={link.name}>
                 <Link
                   to={link.path}
-                  className={`block py-2 px-3 text-sm font-(--font-condensed) uppercase tracking-[2px] ${
+                  className={`block py-2 px-3 text-sm font-body font-medium capitalize tracking-wide ${
                     location.pathname === link.path
                       ? 'text-primary'
                       : 'text-dark hover:text-primary'
@@ -210,15 +210,15 @@ export default function Navbar() {
             </Link>
             {user ? (
               <>
-                <Link to="/my-bookings" className="block py-2 px-3 text-sm font-(--font-condensed) uppercase tracking-[2px] text-dark hover:text-primary">
+                <Link to="/my-bookings" className="block py-2 px-3 text-sm font-body font-medium capitalize tracking-wide text-dark hover:text-primary">
                   My Bookings
                 </Link>
-                <button onClick={logout} className="text-left block py-2 px-3 text-sm font-(--font-condensed) uppercase tracking-[2px] text-body hover:text-primary">
+                <button onClick={logout} className="text-left block py-2 px-3 text-sm font-body font-medium capitalize tracking-wide text-body hover:text-primary">
                   Logout
                 </button>
               </>
             ) : (
-              <Link to="/login" className="block py-2 px-3 text-sm font-(--font-condensed) uppercase tracking-[2px] text-dark hover:text-primary">
+              <Link to="/login" className="block py-2 px-3 text-sm font-body font-medium capitalize tracking-wide text-dark hover:text-primary">
                 Login
               </Link>
             )}
