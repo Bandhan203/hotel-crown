@@ -1,0 +1,20 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('dashboard/admin/', views.AdminDashboardView.as_view(), name='admin-dashboard'),
+    path('dashboard/guest/', views.GuestDashboardView.as_view(), name='guest-dashboard'),
+    # Night Audit
+    path('admin/night-audit/', views.NightAuditListView.as_view(), name='night-audit-list'),
+    path('admin/night-audit/preview/', views.NightAuditPreviewView.as_view(), name='night-audit-preview'),
+    path('admin/night-audit/run/', views.NightAuditRunView.as_view(), name='night-audit-run'),
+    path('admin/night-audit/<str:audit_date>/', views.NightAuditDetailView.as_view(), name='night-audit-detail'),
+    # Reports
+    path('admin/reports/occupancy/', views.OccupancyReportView.as_view(), name='report-occupancy'),
+    path('admin/reports/revenue/', views.RevenueReportView.as_view(), name='report-revenue'),
+    path('admin/reports/arrivals-departures/', views.ArrivalsReportView.as_view(), name='report-arrivals'),
+    path('admin/reports/no-shows/', views.NoShowReportView.as_view(), name='report-no-shows'),
+    path('admin/reports/cancellations/', views.CancellationReportView.as_view(), name='report-cancellations'),
+    path('admin/reports/guest-ledger/', views.GuestLedgerReportView.as_view(), name='report-guest-ledger'),
+]
